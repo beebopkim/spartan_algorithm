@@ -14,8 +14,8 @@ def get_melon_best_album(genre_array, play_array):
     result = []
     while genre_count_dict_sorted:
         genre = genre_count_dict_sorted.pop()[0]
-        genre_filtered_list = [x for x in ordered_genre_play_count_list if x[1] == genre]
-        genre_filtered_list = sorted(genre_filtered_list, key=lambda x: x[2])
+        genre_filtered_list = sorted([x for x in ordered_genre_play_count_list if x[1] == genre],
+                                     key=lambda x: x[2])
         genre_len = len(genre_filtered_list)
         for x in range(min(2, genre_len)):
             genre_play_item = genre_filtered_list.pop()
