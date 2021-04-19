@@ -16,7 +16,6 @@ def is_correct_parenthesis(string):
                 return False
             paren_stack.pop()
 
-
     if len(param_stack) == 0 and len(paren_stack) == 0:
         return True
     else:
